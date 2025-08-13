@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TECHKEED-MD SESSION GENERATOR</title>
+<style>
+  :root {
+    --black: #000000;
+    --primary: #48ff00;
+    --primary-dark: #15ff00;
+    --text: #f8fafc;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("assets/Thugkeed-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    position: relative;
+    color: var(--white);
+  }
+
+  /* Dark overlay for text readability */
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+
+  h2.title {
+    z-index: 1;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 12px black;
+    text-align: center;
+    position: relative;
+  }
+
+  .button {
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 15px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    color: var(--white);
+    font-weight: 900;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.2s;
+    background: linear-gradient(0deg, #000, #111);
+    margin-bottom: 15px;
+    z-index: 1;
+  }
+
+  .button:before, .button:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #48ff00, #15ff00, #000000, #000000, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 10s linear infinite;
+  }
+
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  .button span {
+    z-index: 1;
+  }
+
+  .button:hover {
+    color: #000;
+    background: #48ff00;
+    box-shadow: 0 0 15px #48ff00;
+    transform: translateY(-3px);
+  }
+
+  .button:active {
+    filter: brightness(0.7);
+    transform: scale(0.98) translateY(0);
+  }
+
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(72, 255, 0, 0.5);
+  }
+</style>
+</head>
+<body>
+  <h2 class="title">TECHKEED-MD SESSION GENERATOR</h2>
+
+  <button onclick="window.open('/pair')" class="button"><span>Get Pair Code</span></button>
+  <button onclick="window.open('https://github.com/TECHKEED/TECHKEED-MD')" class="button"><span>GitHub Repo</span></button>
+  <button onclick="window.open('https://youtube.com/@TECHKEED')" class="button"><span>YouTube Channel</span></button>
+  <button onclick="window.open('https://wa.me/27712943636?text=Hey%20TECHKEED-MD!')" class="button"><span>WhatsApp Message</span></button>
+  <button onclick="window.open('https://whatsapp.com/channel/0029VbAZxXw5K3zbGOsMxK1g')" class="button"><span>WhatsApp Channel</span></button>
+  <button onclick="window.open('https://t.me/YYtech')" class="button"><span>Telegram</span></button>
+</body>
+  </html>
